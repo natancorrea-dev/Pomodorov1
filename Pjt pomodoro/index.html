@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro v1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <head></head>
+    <main>
+        <label for="minutos">Minutos: </label>
+        <input type="number" id="minutos" min="1" value="25">
+
+        <button onclick="iniciarTimer()">Start</button>
+        <button onclick="reiniciar()">Restart</button>
+        <button onclick="stopper()">Pause</button>
+
+        <div class="roda-container">
+            <div id="roda" class="roda">
+                <div class="marcador"></div>
+
+                <span class="seta direita">+</span>
+                <span class="seta esquerda">-</span>
+            </div>
+
+            <p>Arraste para ajustar os minutos</p>
+
+        </div>
+        
+        <div class="container">
+            <h1 id="contador">00:00</h1> 
+            <!-- aqui é responsável por mostrar o visor na tela -->
+
+            <div>
+                <button onclick="incrementar()">+</button>
+                <button onclick="diminuir()">-</button>
+                <button onclick="reiniciar()">R</button>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>Uma produção de Natan</p>
+    </footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
